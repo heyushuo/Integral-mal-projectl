@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>分类搜索</title>
+		<style type="text/css">
+			/*分类搜索*/
+			.searchKind-box{}
+			.skb-search-bar{
+				background-color: inherit;
+				padding: 0.05rem;
+			}
+			.skb{
+				background-color: #fff;
+				border: 1px solid #E5E5E5;
+			}
+			button.skb-btn{
+				background: -webkit-linear-gradient(#fff, #eee);
+				background: -moz-linear-gradient(#fff, #eee);
+				background: linear-gradient(#fff, #eee);
+				color: #333;
+				/*border-left: 1px solid #eee;*/
+				-webkit-border-top-right-radius: 0.05rem;
+				-moz-border-top-right-radius: 0.05rem;
+				border-top-right-radius: 0.05rem;
+				-webkit-border-bottom-right-radius: 0.05rem;
+				-moz-border-bottom-right-radius: 0.05rem;
+				border-bottom-right-radius: 0.05rem;
+			}
+			.skb-title{
+				background-color: #fff;
+			}
+			.skb-tbl{
+				height: 0.3rem;
+				line-height: 0.3rem;
+			}
+			a.t1, a.t2, a.t3{
+				background-position: 85% 55%;
+				background-repeat: no-repeat;
+				background-size: 10%;
+			    display: block;
+			    padding: 0;
+			}
+			a.t1{
+				background-image: url("../images/icon-18.png");
+			}
+			a.t2{
+				background-image: url("../images/icon-19.png");
+			}
+			a.t3{
+				background-image: url("../images/icon-20.png");
+			}
+			.skb-cnt{}
+			.skb-block{}
+			.skb-block a{
+				background-color: #fff;
+				color: #777;
+				display: block;
+				height: 2rem;
+			    margin-top: 0.05rem;
+			    width: 49.5%;
+			}
+			.skb-block a.a-left{
+				float: left;
+			}
+			.skb-block a.a-right{
+				float: right;
+			}
+			.div-img, .div-intro{
+				margin: 0 auto;
+				width: 90%;
+			}
+			.div-img{
+				height: 1.6rem;
+				line-height: 1.6rem;
+			}
+			.div-img img{
+				height: 55%;	/*此句可注释*/
+				vertical-align: middle;
+				width: 96%;
+			}
+			div.div-intro{
+				text-align: left;
+			}
+			div.div-intro p{
+				line-height: normal;
+				margin: 0;
+			}
+			.p-name{
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.p-integral{
+				color: #F16661;
+			}
+			.cart-layer{
+				position: fixed;
+				height:0.5rem;
+			    overflow: hidden;
+			    outline: 0;
+			    position: fixed;
+			    right: 5%;
+			    top: 70%;
+			    width: 0.5rem;
+			}
+			#goodsnum{
+				position: absolute;
+				top: 0rem;
+				left: 0rem;
+				background: red;
+				border-radius:0.1rem ;
+				width: 0.15rem;
+				height: 0.15rem;
+				text-align: center;
+				line-height: 0.15rem;
+				color: white;
+				display:none;
+			}
+			.cart-layer img{
+				height: 100%;
+				width: 100%;
+			}
+			/*分类搜索*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>分类搜索</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+			<div class="searchKind-box">
+				<div class="search-box skb-search-bar">
+					<div class="sb skb">
+						<input placeholder="请输入商品名称进行搜索" />
+						<button class="skb-btn">搜索</button>
+						<div class="clean"></div>
+					</div>
+				</div>
+				<div class="skb-title">
+					<table class="as-tbl skb-tbl" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td>
+								<a href="javascript:;" class="t1">积分排序</a>
+							</td>
+							<td><a href="javascript:;" class="t2">销量优先</a></td>
+							<td><a href="javascript:;" class="t3">筛选条件</a></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="skb-cnt">
+					<!--一行-->
+					<div class="skb-block">
+						<!--left-->
+						<a href="goods-detail.html" class="a-left">
+							<div class="div-img"><img src="images/img-9.png" /></div>
+							<div class="div-intro">
+								<p class="p-name">100元充值卡</p>
+								<p class="p-integral"><span>10000</span><span>积分</span></p>
+							</div>
+						</a>
+						<!--right-->
+						<a href="goods-detail.html" class="a-right">
+							<div class="div-img"><img src="images/img-10.png" /></div>
+							<div class="div-intro">
+								<p class="p-name">50元充值卡</p>
+								<p class="p-integral"><span>5000</span><span>积分</span></p>
+							</div>
+						</a>
+						<div class="clean"></div>
+					</div>
+					<!--一行-->
+					<div class="skb-block">
+						<!--left-->
+						<a href="goods-detail.html" class="a-left">
+							<div class="div-img"><img src="images/img-11.png" /></div>
+							<div class="div-intro">
+								<p class="p-name">30元充值卡</p>
+								<p class="p-integral">3000积分</p>
+							</div>
+						</a>
+						<!--right-->
+						<a href="goods-detail.html" class="a-right">
+							<div class="div-img"><img src="images/img-12.png" /></div>
+							<div class="div-intro">
+								<p class="p-name">20元充值卡</p>
+								<p class="p-integral">2000积分</p>
+							</div>
+						</a>
+						<div class="clean"></div>
+					</div>
+					<div class="skb-block">
+						<!--left-->
+						<a href="goods-detail.html" class="a-left">
+							<div class="div-img"><img src="images/img-13.png" /></div>
+							<div class="div-intro">
+								<p class="p-name">法克曼不锈钢量少FKMA018</p>
+								<p class="p-integral">3180积分</p>
+							</div>
+						</a>
+						<!--right-->
+						<a href="goods-detail.html" class="a-right">
+							<div class="div-img"><img src="images/img-14.png" /></div>
+							<div class="div-intro">
+								<p class="p-name">【中粮定制】简沃-A类加厚纯棉毛巾</p>
+								<p class="p-integral">2320积分</p>
+							</div>
+						</a>
+						<div class="clean"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+
+		<!-- 购物车 -->
+		<div id="cart_layer" class="cart-layer">
+			<img src="images/icon-13.png" />
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

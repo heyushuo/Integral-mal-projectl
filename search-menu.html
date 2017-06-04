@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>分类搜索</title>
+		<style type="text/css">
+			/*分类搜索*/
+			.menu-box{
+				background: white;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.search-kind{
+				background-color: #fff;
+				/*padding-bottom: 50px;*/
+				/*position: absolute;*/
+				width: 100%;
+			}
+			
+			.search-left{
+				background-color: #f3f3f3;
+				float: left;
+				width: 20%;
+			}
+			.search-left ul{
+				width: 100%;
+			}
+			.search-left ul li{
+				width: 100%;
+				border-bottom: 1px solid #ccc;
+				/*color: #666;*/
+				height: 0.45rem;
+				line-height: 0.45rem;
+			}
+			.search-left ul li.active{
+				background-color: #fff;
+				border-bottom: 1px solid #fff;
+				color: #F79A41;
+			}
+			
+			.search-right{
+				float: right;
+			    width: 80%;
+			}
+			.sr-cnt{
+				padding: 0.1rem;
+				text-align: left;
+			}
+			.sr-cnt a{
+				border: 1px solid #ddd;
+				color: #444;
+				margin: 0 0.02rem;
+				display: inline-block;
+				padding: 0.1rem 0.2rem;
+			}
+			/*分类搜索*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box menu-box" style="padding-bottom:0;" >
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);" onclick="">返回</a></div>
+				<div class="head-title">
+					<span>分类</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href=""javascript:window.opener=null;window.open('','_self');window.close();">关闭</a></div>
+			</div>
+			<div class="search-kind">
+				<div id="sleft" class="search-left">
+					<ul class="clearfix">
+						<li class="active">通信类礼品</li>
+						<li>家居用品</li>
+						<li>家用电器</li>
+						<li>手机配件</li>
+						<li>数码产品</li>
+						<li>电脑周边</li>
+						<li>汽车周边</li>
+						<li>箱包配饰</li>
+						<li>个护化妆</li>
+						<li>母婴用品</li>
+					</ul>
+				</div>
+				<div class="search-right">
+					<div class="sr-cnt">
+						<a href="search-kind.html">充值卡</a>
+						<a href="search-kind.html">话费</a>
+					</div>
+				</div>
+				<div class="clean"></div>
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script src="script/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false);
+			    
+			}
+			
+			function sort(){
+			    	var menu_resource = [
+					{"data":"<a href='search-kind.html'>充值卡</a><a href='search-kind.html'>话费</a>"}, 
+					{"data":"<a href='search-kind.html'>床单被罩</a><a href='search-kind.html'>毛巾</a>"},
+					{"data":"<a href='search-kind.html'>洗衣机</a><a href='search-kind.html'>冰箱</a>"},
+					{"data":"<a href='search-kind.html'>充电器</a><a href='search-kind.html'>耳机</a>"},
+					{"data":"<a href='search-kind.html'>数码相机</a><a href='search-kind.html'>拍立得</a>"},
+					{"data":"<a href='search-kind.html'>电脑桌</a><a href='search-kind.html'>散热器</a>"},
+					{"data":"<a href='search-kind.html'>行车记录仪</a><a href='search-kind.html'>加油卡</a>"},
+					{"data":"<a href='search-kind.html'>旅行箱</a><a href='search-kind.html'>时尚饰品</a>"},
+					{"data":"<a href='search-kind.html'>爽肤水</a><a href='search-kind.html'>眼线</a>"},
+					{"data":"<a href='search-kind.html'>孕妇护肤</a><a href='search-kind.html'>宝宝护肤</a>"}
+					];
+					var idx = $(this).index();
+					$(this).addClass("active").siblings().removeClass("active");
+					$(".search-right").find(".sr-cnt").html(menu_resource[idx].data);
+	       		}
+			
+			
+			for(var i=0;i<$('#sleft li').length;i++){
+	       			$("#sleft li")[i].addEventListener("touchstart",sort,false);
+	       	}
+		</script>
+	</body>
+</html>

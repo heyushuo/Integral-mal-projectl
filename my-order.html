@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>我的订单</title>
+		<style type="text/css">
+			/*我的订单*/
+			div.myOrder-box, div.order-num, div.oc-top, div.oc-btm, div.oc-buy{
+				text-align: left;
+				/*text-indent: 0.5em;*/
+			}
+			.order-block{
+				margin: 0.1rem 0;
+			}
+			.order-num{
+				background-color: #FFFDF1;
+				border-bottom: 1px solid #eee;
+				border-top: 1px solid #eee;
+				font-size: 0.15rem;
+				height: 0.33rem;
+				line-height: 0.33rem;
+			}
+			.order-cnt{
+				background-color: #fff;
+			}
+			.order-num, .oc-top, .oc-btm{
+				padding: 0 0.1rem;
+			}
+			.oc-top, .oc-btm{
+				height: 0.35rem;
+				line-height: 0.35rem;
+			}
+			.goods-name, .order-time{
+				display: block;
+			}
+			.goods-name{
+				float: left;
+			    width: 45%;
+			    white-space: nowrap;
+			    overflow: hidden;
+			}
+			.order-time{
+				float: right;
+				padding-right: 0.05rem;
+				text-align: right;
+			}
+			.oc-mid{
+				border-bottom: 1px dashed #ccc;
+				border-top: 1px dashed #ccc;
+				padding: 0.1rem;
+			}
+			.oc-img{
+			    float: left;
+			    margin-right: 0.1rem;
+			}
+			.oc-img img{
+				float: left;
+			    border: 1px solid #8F8F8E;
+			    padding: 0.05rem 0;
+			}
+			.oc-info, div.oc-buy{
+				/*text-indent: 0;*/
+			}
+			.oc-title{
+				text-align: left;
+			}
+			.oc-title a, .buy-val{
+				color: #333;
+			}
+			.oc-buy{
+				margin-top: 0.05rem;
+			}
+			.buy-name{}
+			.buy-val{}
+			.cart-right{
+				/*display: inline-block;*/
+				float: right;
+				margin-right: 0.05rem;
+			}
+			.cart-right a.cart-del{
+				border: 1px solid #555;
+				-webkit-border-radius: 0.05rem;
+				-moz-border-radius: 0.05rem;
+				border-radius: 0.05rem;
+				color: #777;
+				display: inline-block;
+				line-height: normal;
+				padding: 0.05rem 0.15rem;
+			}
+			.oc-go{
+				line-height: 650%;
+				margin-right: 0;
+			}
+			.oc-go img{
+				vertical-align: middle;
+			}
+			.oc-btm{
+				color: #F16661;
+			}
+			.integral-val{
+				font-size: 0.14rem;
+			}
+			/*我的订单*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>我的订单</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+			
+			<div class="myOrder-box">
+				<div class="order-block">
+					<div class="order-num">
+						<span>订单号：</span>
+						<span>8178583327256178688</span>
+					</div>
+
+					<div class="order-cnt">
+						<div class="oc-top">
+							<span class="goods-name">中国联通</span>
+							<span class="order-time">2016年09月26日 13:14:21</span>
+							<div class="clean"></div>
+						</div>
+
+						<div class="oc-mid">
+							<div class="cart-left w90 pull-left">
+								<a href="goods-detail.html" class="oc-img"><img src="images/img-7.png" /></a>
+								<div class="oc-info">
+									<div class="oc-title">
+										<a href="goods-detail.html">KOOLIFE 苹果iPhone 6/6s手机壳保护套硅胶软壳 iPhone6s透明壳 薄外壳</a>
+									</div>
+									<div class="oc-buy">
+										<span class="buy-num">件数：</span>
+										<span class="buy-val">1</span>
+									</div>
+								</div>
+								<div class="clean"></div>
+							</div>
+
+							<div class="cart-right oc-go pull-left">
+								<a href="goods-detail.html"><img src="images/icon-17.png" /></a>
+							</div>
+							<div class="clean"></div>
+						</div>
+						
+						<div class="oc-btm">
+							<span>总额：<span class="integral-val">500积分</span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,227 @@
+﻿body{
+	background-color: #F1F1F1;
+	font-size: 0.12rem;
+}
+div{
+	text-align: center;
+}
+table{
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 100%;
+}
+table, th, td{
+	border: 1px solid #ccc;
+}
+
+img{
+	border: none;
+}
+
+.clean{
+	clear: both;
+}
+
+.w90{
+	width: 90%;
+}
+
+.box{
+	overflow-x: hidden;/*避免无内容超出时, 出现水平滚动条*/
+	padding-bottom: 0.5rem;
+	position: relative;
+}
+
+.banner-img{
+	height: 100%;
+	width: 100%;
+}
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+/** 设置默认字体 **/
+body, button, input, select, textarea /* for ie */ {
+  font-size: 0.12rem;
+  font-family: "微软雅黑";
+  
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }>>>>>>> f9209a884153f1f5efaf53b254ec37f012de0b08
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 0.12rem; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+ul li{
+	float: left;
+}
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; color: #333; -webkit-tap-highlight-color:rgba(255,255,255,0) }
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/*float*/
+.pull-left{
+  float:left;
+}
+
+.pull-right{
+  float:right;
+}
+.pull-right:after,.pull-left:after{
+  clear: both;
+}
+/*clearfix*/
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0  }
+/*.clearfix:after{clear:both;}*/
+.clearfix{ *zoom:1;/*IE/7/6*/ }
+.hello{
+	color: #777;
+	/*font-size: 300%;*/
+	margin: 20px auto;
+	text-align: center;
+	text-shadow: 2px 5px 5px #bbb;
+	-webkit-text-shadow: 2px 5px 5px #bbb;
+	-moz-text-shadow: 2px 5px 5px #bbb;
+}
+
+.btn-block{
+	text-align: center;
+}
+
+.start{
+	background: #0C9EA9;
+	border: 1px solid #0896A0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-size: 0.12rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	margin: 0 auto;
+	transition: background 1s;
+	text-decoration: none;
+	width: 90%;
+}
+.start:hover{
+	background: #1F8289;
+	box-shadow: 0 5px 10px #ccc;
+	-webkit-box-shadow: 0 5px 10px #ccc;
+	-moz-box-shadow: 0 5px 10px #ccc;
+}
+/*顶部*/
+div.header{
+	width: 100%;
+	background-color: #53B373;
+	color: #fff;
+	height: 0.4rem;
+	text-align: left;
+}
+.header a{
+	color: #fff;
+}
+.back, .head-title, .close{
+	display: inline-block;
+}
+.back, .close{
+	line-height:0.4rem;
+}
+div.back{
+	float: left;
+	text-align: left;
+	text-indent: 1em;
+	/*width: 10%;*/
+}
+div.head-title{
+	margin: 0.05rem 0;
+	text-align: center;
+	width: 75%;
+}
+div.head-title span{
+	display: block;
+	line-height: 0.15rem;
+	font-size: 0.13rem;
+}
+div.close{
+	float: right;
+	margin-right: 1em;
+	text-align: right;
+	/*width: 10%;*/
+}
+/*顶部*/
+/*搜索框*/
+.search-box{
+	background-color: #fff;
+	padding: 0.1rem 0.15rem;
+}
+.sb{
+	border: 1px solid #F8B305;
+	border-radius: 0.05rem;
+	height: 0.3rem;
+}
+.sb input{
+	border: none;
+	border-radius: 0.05rem;
+	float: left;
+	height: 100%;
+	text-indent: 1em;
+	width: 80%;
+}
+.sb button{
+	background-color: #f8c244;
+	border: none;
+	color: #fff;
+	float: right;
+	height: 0.3rem;
+	width: 19.5%;
+}
+/*搜索框*/
+/*积分排序,销量优先,筛选条件*/
+.skb-title{
+	background-color: #fff;
+}
+.as-tbl, .as-tbl tr, .as-tbl td{
+	border: 0;
+}
+.as-tbl a{
+	color: #777;
+	padding-bottom: 0.05rem;
+}
+.as-tbl a.active{
+	border-bottom: 2px solid #EF7513;
+	color: #EF7513;
+}
+.skb-tbl{
+	height: 0.3rem;
+	line-height: 0.3rem;
+}
+a.t1, a.t2, a.t3{
+	background-position: 85% 55%;
+	background-repeat: no-repeat;
+	background-size: 10%;
+    display: block;
+    padding: 0;
+}
+a.t1{
+	background-image: url("../images/icon-18.png");
+}
+a.t2{
+	background-image: url("../images/icon-19.png");
+}
+a.t3{
+	background-image: url("../images/icon-20.png");
+}
+/*积分排序,销量优先,筛选条件*/

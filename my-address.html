@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>地址管理</title>
+		<style type="text/css">
+			/*地址管理*/
+			.adr-box{
+				margin: 0;
+				font-size: 0.14rem;
+			}
+			.adr-block{
+				background-color: #fff;
+				margin-bottom: 0.1rem;
+				padding: 0 0.1rem;
+			}
+			.adr-top{
+				border-bottom: 1px solid #ccc;
+				padding: 0.1rem 0;
+			}
+			.adr-tbl{
+				table-layout: fixed;
+			}
+			.adr-tbl, .adr-tbl tr, .adr-tbl td{
+				border: 0;
+				word-break: break-all;
+			}
+			.adr-sp{
+				color: #999;
+			}
+			.adr-btm{
+				padding: 0.05rem 0;
+			}
+			.adr-btm-left, .adr-btm-right{
+				width: 50%;
+			}
+			.adr-btm-left{
+				float: left;
+				text-align: left;
+			}
+			.adr-btm-left input{
+				vertical-align: middle;
+			}
+			.adr-btm-right{
+				float: right;
+				text-align: right;
+			}
+			.adr-btm-right a{
+				color: #999;
+				margin: 0 0.05rem;
+			}
+			.adr-btm-right img{
+				height: 10%;
+				padding-right: 0.05rem;
+				vertical-align: middle;
+				width: 10%;
+			}
+			
+			.addresscontent{
+				width: 85%;
+				margin: 10% auto;
+				text-align: left;
+				display: none;
+			}
+			.addresscontent li{
+				padding: 0.1rem 0;
+				text-align: center;
+				float: none;
+			}
+			.addresscontent li input{
+				width: 100%;
+				height: 0.25rem;
+				text-indent: 0.1rem;
+			}
+			#region{
+				/*padding: 0.1rem 0;*/
+				text-align: left;
+			}
+			#region select{
+				width: 32%;
+				height: 0.25rem;
+			}
+			.addresscontent .submit_address{
+				background-color: #ED6C00;
+			    border: 1px solid #F47205;
+			    color: #fff;
+			    height: 0.35rem;
+			    width: 50%;
+			    margin-top: 30%;
+			}
+			.sug-block{
+				margin: 0 0 0.1rem 0;
+			}
+			.sug-block input, .sug-block select, .sug-block textarea{
+				border: 1px solid #999;
+				-webkit-border-radius: 0.04rem;
+				-moz-border-radius: 0.04rem;
+				border-radius: 0.04rem;
+				display: inline-block;
+				text-indent: 0.5em;
+				width: 100%;
+			}
+			.sug-block input{
+				height: 0.3rem;
+				line-height: 0.3rem;
+			}
+			.sug-block select{
+				color: #999;
+				height: 0.35rem;
+				text-indent: 0.3em;
+			}
+			.sug-block textarea{
+				height: 1.3rem;
+				resize: none;
+				text-indent: 0.3em;
+				width: 98%;
+			}
+			.sug-sub{
+				margin-top: 0.2rem;
+			}
+			.sug-sub input{
+				background-color: #ED6C00;
+				border: 1px solid #F47205;
+				color: #fff;
+				height: 0.35rem;
+				width: 50%;
+			}
+			/*地址管理*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>地址管理</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+
+			<div class="adr-box">
+				<!--地址块-->
+				<div class="adr-block">
+					<div class="adr-top">
+						<table class="adr-tbl" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td class="userName" align="left">赵钱孙</td>
+								<td class="userPhone" align="left">18011119999</td>
+								<td rowspan="2" style="width: 8%;">></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">
+									<span class="adr-sp">北京市&nbsp;市辖区&nbsp;顺义区&nbsp;大钟寺华杰大厦C座</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="adr-btm">
+						<div class="adr-btm-left">
+							<input id="defaultAddr" class="adr-chk" type="checkbox" />
+							<label>默认地址</label>
+						</div>
+						<div class="adr-btm-right">
+							<a  href="javascript:;" class="editAddress" ><img src="images/icon-14.png" /><label >编辑</label></a>
+							<a  href="javascript:;" class="deleteAddress" ><img src="images/icon-15.png" /><label >删除</label></a>
+						</div>
+						<div class="clean"></div>
+					</div>
+				</div>
+				<!--地址块-->
+
+				<div class="adr-block">
+					<div class="adr-top">
+						<table class="adr-tbl" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td class="userName" align="left">周吴郑</td>
+								<td class="userPhone" align="left">18011111111</td>
+								<td rowspan="2" style="width: 8%;">></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">
+									<span class="adr-sp">河北省&nbsp;石家庄市&nbsp;藁城市&nbsp;周吴郑王 建设有中国特色的社会主义国家</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="adr-btm">
+						<div class="adr-btm-left">
+							<input id="defaultAddr" class="adr-chk" type="checkbox" />
+							<label>默认地址</label>
+						</div>
+						<div class="adr-btm-right">
+							<a href="javascript:;" class="editAddress" ><img src="images/icon-14.png" /><label >编辑</label></a>
+							<a href="javascript:;" class="deleteAddress" ><img src="images/icon-15.png" /><label >删除</label></a>
+						</div>
+						<div class="clean"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sug-block sug-sub" id="sug-block">
+				<input id="addAddress" type="button" value="+ 添加新地址" />
+			</div>
+			<ul  class="addresscontent clearfix" id="address_add" >
+		        <li>
+		         	<p><input value="" name="consignee" placeholder="填写你的真实姓名" id="adduserName" class="text" type="text"></p>
+		        </li>
+		        <li>
+		          	<div id="region">
+			          	<select name="sheng" id="s1"></select>
+			        	<select name="shi" id="s2"></select>
+			     		<select name="qu" id="s3"></select>
+		    		</div>
+		  		</li>
+				<li>
+				    <p><input value="" name="address" id="adddetailAddress" placeholder="详细地址" class="text width1" type="text" /></p>
+				</li>
+				<li>
+				    <p><input value="" id="adduserPhone" name="phone_mob" class="text" type="number" placeholder="电话"  /></p>
+				</li>
+				<li>
+				    <p><input id="email" type="text" placeholder="邮编"  /></p>
+				</li>
+				<li id="prompt" style="text-align: left; color: red;"></li>
+				 <li>
+				    <input class="submit_address" id="submit_address" value="保存" type="button" />
+				 </li>
+				 
+			</ul>
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script src="script/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/libs/diqu2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/js/my-address.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

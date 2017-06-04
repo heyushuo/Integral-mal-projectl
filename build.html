@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>商品列表</title>
+		<style type="text/css">
+			/*商品列表*/
+			.shopList{
+				width: 100%;
+				height: 100%;
+				padding: 0.01rem 0;
+			}
+			.sl{
+				width: 100%;
+				padding: 0.01rem 0;
+				/*height: 100%;*/
+			}
+			.sl ul{
+				width: 100%;
+				height: 100%;
+			}
+			.sl img{
+				width: 100%;
+			}
+			.sl ul li{
+				width: 49.5%; 
+				background-color: #fff;
+				margin-top: 0.05rem;
+			}
+			.sl ul li a{
+				width: 100%;   
+			    color: #777;
+			    display: block; 
+			}
+			.shop-list{
+				text-align: left;
+			}
+			.shop-list p{
+				text-indent: 0.1rem;
+				padding: 0 0 0.05rem 0;
+			}
+			/*商品列表*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>商品列表</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+			<div class="shopList">
+				<div class="search-box skb-search-bar">
+					<div class="sb skb">
+						<input placeholder="请输入商品名称进行搜索" />
+						<button class="skb-btn">搜索</button>
+						<div class="clean"></div>
+					</div>
+				</div>
+				<div class="skb-title">
+					<table class="as-tbl skb-tbl" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td>
+								<a href="javascript:;" class="t1">积分排序</a>
+							</td>
+							<td><a href="javascript:;" class="t2">销量优先</a></td>
+							<td><a href="javascript:;" class="t3">筛选条件</a></td>
+						</tr>
+					</table>
+				</div>
+				<div class="sl clearfix">
+					<ul class="clearfix">
+						<li class="pull-left shop-list"><a href="javascript:;">
+								<img src="images/shoplist-1.jpg" />
+								<p>不锈钢量勺</p>
+								<p style="color: #F38481;">3180积分</p>
+							</a></li>
+						<li class="pull-right shop-list"><a href="javascript:;">
+								<img src="images/shoplist-2.jpg" />
+								<p>精品毛巾</p>
+								<p style="color: #F38481;">2190积分</p>
+							</a></li>
+						<li class="pull-left shop-list"><a href="javascript:;">
+								<img src="images/shoplist-3.jpg" />
+								<p>洗衣香皂</p>
+								<p style="color: #F38481;">100积分</p>
+							</a></li>
+						<li class="pull-right shop-list"><a href="javascript:;">
+								<img src="images/shoplist-4.jpg" />
+								<p>黄瓜洗衣皂</p>
+								<p style="color: #F38481;">200积分</p>
+							</a></li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

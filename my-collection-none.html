@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>我的收藏</title>
+		<style type="text/css">
+			/*我的收藏*/
+			.mc-box{}
+			.mc-cnt{
+				background-color: #fff;
+				padding: 0.1rem;
+			}
+			.mc-empty{
+				line-height: 0.4rem;
+			}
+			.mc-empty a{
+				color: #3939F3;
+				text-decoration: underline;
+			}
+			.as-block{
+				padding: 0.1rem;
+			}
+			/*我的收藏*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>我的收藏</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+			
+			<div class="mc-box">
+				<div class="mc-cnt">
+					<p class="mc-empty">
+						<span>您还没有收藏过任何商品，<a href="index.html">去商城逛逛吧</a></span>
+					</p>
+				</div>
+
+				<div class="as-cnt">
+					<div class="as-block">
+						<span class="empty">已加载完全部商品</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

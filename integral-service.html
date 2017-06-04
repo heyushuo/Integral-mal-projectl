@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>积分服务</title>
+		<style type="text/css">
+			/*积分服务*/
+			.integral-box{}
+			.my-integral{
+				background-color: #00ADF7;
+				height: 0.85rem;
+				text-align: left;
+			}
+			.my-integral img{
+				margin: 0 0.1rem;
+				vertical-align: middle;
+			}
+			.my-integral-data{
+				display: inline-block;
+				height: 0.7rem;
+			    margin-top: 0.15rem;
+			    vertical-align: middle;
+			}
+			.my-integral-data span{
+				display: block;
+			}
+			.my-integral-data span.sp-1{
+				color: #fff;
+			}
+			.my-integral-data span.sp-2{
+				color: #87D6FB;
+			}
+			.my-integral-data span.sp-3{
+				color: #87D6FB;
+			}
+			
+			.integral-menu{
+				text-align: left;
+			}
+			.integral-menu a{
+				background-color: #fff;
+				display: block;
+				margin-bottom: 0.01rem;
+			    padding: 0.1rem 0;
+			}
+			.integral-menu a img{
+				height: 0.25rem;
+				margin: 0 0.2rem 0 0.1rem;
+				vertical-align: middle;
+				width: 0.28rem;
+			}
+			.integral-menu a span{
+				display: inline-block;
+			}
+			.integral-menu a span.sp-1{
+				color: #666;
+			}
+			.integral-menu a span.sp-2{
+				color: #999;
+				float: right;
+			    font-size: 0.28rem;
+			    margin-right: 0.15rem;
+			    margin-top: -0.06rem;
+			}
+			/*积分服务*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>积分服务</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+
+			<div class="integral-box">
+				<div class="my-integral">
+					<img src="./images/head.png" />
+					<div class="my-integral-data">
+						<span class="sp-1">12345678901</span>
+						<span class="sp-2">积分余额：8888</span>
+						<span class="sp-3">积分总额：8888</span>
+					</div>
+				</div>
+				
+				<div class="integral-menu">
+					<a href="integral-create.html">
+						<img src="./images/icon-6.png" />
+						<span class="sp-1">积分消费记录</span>
+						<span class="sp-2">></span>
+					</a>
+					<a href="integral-create.html">
+						<img src="./images/icon-7.png" />
+						<span class="sp-1">积分生成记录</span>
+						<span class="sp-2">></span>
+					</a>
+					<a href="my-suggest.html">
+						<img src="./images/icon-8.png" />
+						<span class="sp-1">我的建议</span>
+						<span class="sp-2">></span>
+					</a>
+					<a href="my-assess.html">
+						<img src="./images/icon-9.png" />
+						<span class="sp-1">我的评价</span>
+						<span class="sp-2">></span>
+					</a>
+					<a href="my-collection.html">
+						<img src="./images/icon-10.png" />
+						<span class="sp-1">我的收藏</span>
+						<span class="sp-2">></span>
+					</a>
+					<a href="my-address.html">
+						<img src="./images/icon-11.png" />
+						<span class="sp-1">我的地址</span>
+						<span class="sp-2">></span>
+					</a>
+					<a href="exchange-info.html">
+						<img src="./images/icon-12.png" />
+						<span class="sp-1">兑换须知</span>
+						<span class="sp-2">></span>
+					</a>
+				</div>
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

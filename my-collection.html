@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>我的收藏</title>
+		<style type="text/css">
+			.mc-box{
+				width: 100%;
+				background: #fff;
+			}
+			
+			.mc-nav li{
+				height: 0.38rem;
+				padding: 0 0.293rem;
+			}
+			.mc-nav{
+				border-bottom: 1px solid #E6E6E6;
+			}
+			.mc-box li a{
+				display: block;
+				line-height: 0.38rem;
+			}
+			.active1{
+				color: #F28C36;
+				border-bottom: 2px solid #F28C36;
+			}
+			.mc-list{
+				width: 100%;
+			}
+			.mc-tab{
+				display: none;
+			}
+			.mc-list ul{
+				width: 95%;
+				margin: 0 auto;
+			}
+			.mc-list li{
+				float: none;
+				border-bottom: 2px solid #E6E6E6;
+				padding: 0.1rem 0;
+			}
+			.mc-list ul li img{
+				width: 0.8rem;
+				height: 0.8rem;
+				float: left;
+			}
+			.mc-list .mc-list-m{
+				margin-left: 0.1rem;
+				padding: 0.05rem 0;
+			}
+			.mc-list .mc-list-m{
+				width:48%;
+				text-align: left;
+			}
+			.mc-list .mc-list-m p{
+				overflow : hidden;
+			    text-overflow: ellipsis;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			}
+			.mc-list .mc-list-m p:nth-child(2){
+				margin-top: 0.2rem;
+				text-align:left;
+				color: #F1706C;
+			}
+			.mc-list .mc-list-r img{
+				width: 0.3rem;
+				height: 0.3rem;
+				float: left;
+			}
+			.mc-list .mc-list-r{
+				width: 20%;
+			}
+			.mc-list-r .mc-list-r-main{
+				margin-top: 0.5rem;
+				vertical-align: middle;
+				height: 0.3rem;
+				line-height: 0.3rem;
+				font-size: 0.14rem;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>我的收藏</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">登录</a></div>
+			</div>
+			<div class="mc-box">
+				<ul class="mc-nav clearfix">
+					<li><a class="active1" href="javascript:;">全部商品</a></li>
+					<li><a href="javascript:;">有效商品</a></li>
+					<li><a href="javascript:;">失效商品</a></li>
+				</ul>
+				<div class="tab">
+					<div class="mc-list mc-tab clearfix" style="display: block;">
+					<ul class="clearfix">
+						<li class="clearfix">
+							<img src="#"/ class="pull-left" >
+							<div class="mc-list-m pull-left">
+								<p>五元话费
+									fsdfkasdjfls爱的发的是解放垃圾收电费垃圾是对方了解爱上了对方
+								</p>
+								<p>500</p>
+							</div>
+							<div class="mc-list-r pull-right">
+								<div class="mc-list-r-main">
+									<img src="images/icon-15.png"/>
+									<span>删除</span>
+								</div>
+							</div>
+						</li>
+						<li class="clearfix">
+							<img src="#"/ class="pull-left" >
+							<div class="mc-list-m pull-left">
+								<p>耳机</p>
+								<p>500</p>
+							</div>
+							<div class="mc-list-r pull-right">
+								<div class="mc-list-r-main">
+									<img src="images/icon-15.png"/>
+									<span>删除</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+					<div class="mc-tab">
+						嘿嘿嘿嘿
+					</div>
+					<div class="mc-tab">
+					哈哈哈哈
+					</div>
+				</div>
+			</div>
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script src="script/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/js/publick.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/js/my-collect.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

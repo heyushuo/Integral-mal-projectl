@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<title>我的建议</title>
+		<style type="text/css">
+			/*我的建议*/
+			.sug-box{
+				margin: 0.1rem auto;
+				width: 93%;
+			}
+			.sug-block{
+				margin: 0 0 0.1rem 0;
+			}
+			.sug-block input, .sug-block select, .sug-block textarea{
+				border: 1px solid #999;
+				-webkit-border-radius: 0.04rem;
+				-moz-border-radius: 0.04rem;
+				border-radius: 0.04rem;
+				display: inline-block;
+				text-indent: 0.5em;
+				width: 100%;
+			}
+			.sug-block input{
+				height: 0.3rem;
+				line-height: 0.3rem;
+			}
+			.sug-block select{
+				color: #999;
+				height: 0.35rem;
+				text-indent: 0.3em;
+			}
+			.sug-block textarea{
+				height: 1.3rem;
+				resize: none;
+				text-indent: 0.3em;
+				width: 98%;
+			}
+			.sug-sub{
+				margin-top: 0.2rem;
+			}
+			.sug-sub input{
+				background-color: #ED6C00;
+				border: 1px solid #F47205;
+				color: #fff;
+				height: 0.35rem;
+				width: 50%;
+			}
+			/*我的建议*/
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>我的建议</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+			
+			<div class="sug-box">
+				<!-- <form method="" action=""> -->
+					<div class="sug-block">
+						<input type="text" id="contactUser" placeholder="联系人" value="" required="required" oninvalid="setCustomValidity('请输入您的姓名');" oninput="setCustomValidity('');" />
+					</div>
+					<div class="sug-block">
+						<input type="text" id="contactNum" placeholder="联系电话" value="" required="required" oninvalid="setCustomValidity('请输入您的电话');" oninput="setCustomValidity('');" />
+					</div>
+					<div class="sug-block">
+						<select id="sugKind" required="required" oninvalid="setCustomValidity('请选择建议类型');" oninput="setCustomValidity('');">
+							<option>建议类型</option>
+							<option>资费建议</option>
+						</select>
+					</div>
+					<div class="sug-block">
+						<textarea id="sugCnt" placeholder="内容" required="required" oninvalid="setCustomValidity('请填写建议内容');" oninput="setCustomValidity('');"></textarea>
+					</div>
+					<div class="sug-block sug-sub">
+						<input type="submit" onclick="" value="提交建议" />
+					</div>
+				<!-- </form> -->
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+		</script>
+	</body>
+</html>

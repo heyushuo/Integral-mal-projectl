@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/goods-detail.css"/>
+		<title>商品详情页</title>
+	</head>
+	<body>
+		<div class="box">
+			<div class="header">
+				<div class="back"><a href="javascript:history.back(-1);">返回</a></div>
+				<div class="head-title">
+					<span>商品详情页</span>
+					<span>18011119999</span>
+				</div>
+				<div class="close"><a href="javascript:;">关闭</a></div>
+			</div>
+
+			<div class="gd-box">
+				<div class="gd-cnt-img">
+					<img src="images/img-15.jpg" />
+				</div>
+
+				<div class="gd-cnt-title">
+					<p class="gct-name">飞毛腿 SC-U520/S102 2口USB电源适配器/充电器 输出5V/2.1A</p>
+					<div class="gct-param">
+						<span class="gctp-left">3040积分</span>
+						<span class="gctp-right"><img src="images/icon-10.png" /></span>
+						<div class="clean"></div>
+					</div>
+				</div>
+
+				<div class="gd-cnt-delivery">
+					<p class="gcd-p1">
+						<label>送至</label>
+						<select id="deliveryAddr">
+							<option>东城区</option>
+							<option>西城区</option>
+							<option>朝阳区</option>
+							<option>海淀区</option>
+						</select>
+						<span class="has">有货</span>
+					</p>
+					
+					<p class="gcd-p2">
+						<label>数量</label>
+						<!--<span class="gcd-p2-span">
+							<a href="javascript:;">-</a>
+							<input type="text" name="num" class="shop-num" value="1" />
+							<a href="javascript:;">+</a>
+						</span>-->
+						<span class="cart-buy-num" style="float: none;" >
+							<a class="reducenum" id="reducenum" href="javascript:;">-</a>
+							<input id="cartnumbers" type="text" name="num" class="shop-num inputnum" value="1" />
+							<a class="addnum" href="javascript:;" >+</a>
+						</span>
+					</p>
+
+					<p class="service-tip">由京东提供发货及售后服务, 服务热线4006221086</p>
+				</div>
+
+				<div class="gd-cnt-info">
+					<p>商品介绍信息</p>
+				</div>
+			</div>
+
+			<div class="gd-cnt-btn">
+				<a href="javascript:;" class="gcb-left" id="gcb-left" >加入购物车</a>
+				<a href="javascript:;" id="gcb-right" class="gcb-right">立即兑换</a>
+				<div class="clean"></div>
+			</div>
+
+			<!-- <div class="menu">
+				<a href="index.html">首页</a>
+				<a href="build.html">服务</a>
+				<a href="build.html">商品</a>
+				<a href="build.html">我的联通</a>
+			</div> -->
+		</div>
+
+		<!--遮罩-->
+		<div class="zhezhao"></div>
+		<!--添加购物车提示层-->
+		<div class="add-cart-tip-layer">
+			<div class="tip-words">添加购物车成功</div>
+			<a  id="tip-btn" class="tip-btn">确定</a>
+		</div>
+		<!-- 购物车 -->
+		<div id="cart_layer" class="cart-layer">
+			<div id="goodsnum">
+					
+			</div>
+			<a href="shop-cart.html"><img src="images/icon-13.png" /></a>
+			
+		</div>
+		<script src="script/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/js/goods-detail.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				//rem布局
+				document.documentElement.style.fontSize = innerWidth/3.2 +"px";
+			    window.addEventListener("resize",function(){
+			        document.documentElement.style.fontSize = innerWidth/3.2  + "px";
+			    },false)
+			}
+
+
+//$("#reducenum").addEventListener("touchstart",reduceNum,false);
+		</script>
+	</body>
+</html>
